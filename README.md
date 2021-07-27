@@ -7,11 +7,18 @@ PreFerrP450 is a Jupyter notebook containing an algorithm predicting the group o
 Due to the interpretability of the utilized machine learning algorithms (primarily tree-based approaches like random forests), it is possible to obtain the most important features for classification and thus were able to gain insight into the biological backgrounds of each of the problems.
 
 Code is developed to run in python 3 (3.8.5). Packages required, version used for publication in parentheses:
+
 Biopython (1.78)
+
 Numpy (1.19.2)
+
 Scikit learn (0.24.0)
+
 Matplotlib (3.3.2)
+
 Imbalanced-learn (0.7.0)
+
+Ubuntu users can utilize the enviroment.yml file
 
 All classifiers use *.fasta amino acid sequences as input.
 For faster calculation in big datasets, alignments of the amino acid sequences against the sequence "sid|14703|pid|10800|hfid|374|sfid|51|gb|KBE51585.1|taxid|1448811| MSAVALPRVS GGHDEHGHLE EFRTDPIGLM QRVRDECGDV GTFQLAGKQV VLLSGSHANE FFFRAGDDDL DQAKAYPFMT PIFGEGVVFD ASPERRKEML HNAALRGEQM KGHAATIEDQ VRRMIADWGE AGEIDLLDFF AELTIYTSSA CLIGKKFRDQ LDGRFAKLYH ELERGTDPLA YVDPYLPIES LRRRDEARNG LVALVADIMN GRIANPPTDK SDRDMLDVLI AVKAETGTPR FSADEITGMF ISMMFAGHHT SSGTASWTLI ELMRHRDAYA AVIDELDELY GDGRSVSFHA LRQIPQLENV LKETLRLHPP LIILMRVAKG EFEVQGHRIH EGDLVAASPA ISNRIPEDFP DPHDFVPARY EQPRQEDLLN RWTWIPFGAG RHRCVGAAFA IMQIKAIFSV LLREYEFEMA QPPESYRNDH SKMVVQLAQP ACVRYRRRTG V" (https://cyped.biocatnet.de/sequence/14703) and cut at positions  92, 192, 275, and 395 and additionally 54-66 and 375-392 (for PreFerrP450) or 92, 192, 275, and 395 (TerP450) can be used.
