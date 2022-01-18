@@ -18,13 +18,13 @@ import os
 import glob
 
 #fill in correct filenames for input/output files
-path = '/home/friederike/Documents/Databases/proGenomes211012022/'
-filename_neighbouring_out="tablep450ferredoxin_neighbouring_progenome2_reference.csv"
-filename_lonely_out="tablep450ferredoxin_lonely_progenome2_reference.csv"
-output_ferredoxin_lonely="lonely_ferredoxins_progenome2_reference.fasta"
-output_p450_neighbouring="neighbouring_p450ferre_progenome2_reference.fasta"
-output_ferredoxin_neighbouring="neighbouring_ferredoxins_progenome2_reference.fasta"
-output_p450_lonely="lonely_p450ferre_progenome2_reference.fasta"
+path = '/home/friederike/Documents/Databases/proGenomes211012022/Raw data/'
+filename_neighbouring_out="tablep450ferredoxin_neighbouring_progenome2.csv"
+filename_lonely_out="tablep450ferredoxin_lonely_progenome2.csv"
+output_ferredoxin_lonely="lonely_ferredoxins_progenome2.fasta"
+output_p450_neighbouring="neighbouring_p450ferre_progenome2.fasta"
+output_ferredoxin_neighbouring="neighbouring_ferredoxins_progenome2.fasta"
+output_p450_lonely="lonely_p450ferre_progenome2.fasta"
 
 
 #creates empty data frame
@@ -64,6 +64,14 @@ list_neighbouring_ferredox=[]
 old_sample_id=""
 #process antismash file
 for progenome_file in glob.glob(os.path.join(path, '*.fasta')):
+        progenome_file_name=str(progenome_file.split("/")[-1])
+        filename_neighbouring_out_n=str(progenome_file_name)+filename_neighbouring_out
+        filename_lonely_out_n=str(progenome_file_name)+filename_lonely_out
+        output_ferredoxin_lonely_n=str(progenome_file_name)+output_ferredoxin_lonely
+        output_p450_neighbouring_n=str(progenome_file_name)+output_p450_neighbouring
+        output_ferredoxin_neighbouring_n=str(progenome_file_name)+output_ferredoxin_neighbouring
+        output_p450_lonely_n=str(progenome_file_name)+output_p450_lonely
+        print(output_p450_lonely_n)
         #for each genome
         for progenome_record in SeqIO.parse(progenome_file, "fasta"):
             record_identifiers=progenome_record.id.split(".")
@@ -85,10 +93,10 @@ for progenome_file in glob.glob(os.path.join(path, '*.fasta')):
                     if "P450" in progenome_record.description:
                             p450s.append([protein_index,record_identifiers[2],progenome_record.seq,record_identifiers[1],progenome_record])
 
-#safe files
-SeqIO.write(list_lonely_p450, output_p450_lonely, 'fasta')
-SeqIO.write(list_lonely_ferredox,output_ferredoxin_lonely, 'fasta')
-SeqIO.write(list_neighbouring_p450, output_p450_neighbouring, 'fasta')
-SeqIO.write(list_neighbouring_ferredox,output_ferredoxin_neighbouring, 'fasta')
-lonely_ferredoxins_p450s.to_csv(filename_lonely_out, index=False) 
-neighbouring_ferredoxins_p450s.to_csv(filename_neighbouring_out, index=False) 
+        #safe files
+        SeqIO.write(list_lonely_p450, output_p450_lonely_n, 'fasta')
+        SeqIO.write(list_lonely_ferredox,output_ferredoxin_lonely_n, 'fasta')
+        SeqIO.write(list_neighbouring_p450, output_p450_neighbouring_n, 'fasta')
+        SeqIO.write(list_neighbouring_ferredox,output_ferredoxin_neighbouring_n, 'fasta')
+        lonely_ferredoxins_p450s.to_csv(filename_lonely_out_n, index=False) 
+        neighbouring_ferredoxins_p450s.to_csv(filename_neighbouring_out_n, index=False) 
