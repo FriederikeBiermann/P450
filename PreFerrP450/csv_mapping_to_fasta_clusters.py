@@ -10,12 +10,13 @@ import pandas as pd
 from Bio import SeqIO
 from Bio import Seq
 from Bio.SeqRecord import SeqRecord
-cytoscape_file=pd.read_csv("cytoscape_ferredoxin_p450_mapping.csv")
-filename_output_scaffold="respresentatives_threshold_40/respresentatives_threshold_40_cluster_"
+cytoscape_file=pd.read_csv("cytoscape_ferredoxin_p450_mapping_neighbouring_ferredoxins_threshold=30.csv")
+filename_output_scaffold="whole_dataset_threshold_30/whole_dataset_threshold_30_"
 
-for cluster in range(1,50):
+for cluster in range(15,16):
     fasta=[]
     filename_output=filename_output_scaffold+str(cluster)+".fasta"
+    print (filename_output)
     for index, row in cytoscape_file.iterrows():
         if row["Ferredoxin_cluster"]==cluster:
             
