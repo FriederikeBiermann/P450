@@ -14,6 +14,5 @@ ferredoxin_p450_mapping["Ferredoxin_cluster"]=np.nan
 for index_f, row_ferre in ferredoxin_p450_mapping.iterrows():
     for index_c, row_cyto in cytoscape_ferredoxin_cluster_mapping.iterrows():
         if row_ferre["ferredoxin_id"] in row_cyto["Description"]:
-            row_ferre["Ferredoxin_cluster"]=row_cyto["Node Count Cluster Number"]
-            ferredoxin_p450_mapping["Ferredoxin_cluster"][index_c]=row_cyto["Node Count Cluster Number"]
+            ferredoxin_p450_mapping["Ferredoxin_cluster"][index_f]=row_cyto["Node Count Cluster Number"]
 ferredoxin_p450_mapping.to_csv("cytoscape_ferredoxin_p450_mapping_neighbouring_ferredoxins_threshold=30.csv")
