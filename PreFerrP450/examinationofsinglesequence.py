@@ -92,7 +92,7 @@ def ferredoxin_calculation (seq_record):
     alignments = pairwise2.align.globalmc(alignmentfa,  seq_record, 1, -1, fewgaps, specificgaps)
 
     seqa=alignments[0][0]
-
+    print (seqa)
     
     seqb=alignments[0][1]
 
@@ -101,6 +101,7 @@ def ferredoxin_calculation (seq_record):
                             end_begin=match.span()[1]
                           
     begbne=seqb[:end_begin+1].replace("-","")
+    print (begbne)
     begb=easysequence(seqb[:end_begin+1].replace("-",""))
 
     #sbr1

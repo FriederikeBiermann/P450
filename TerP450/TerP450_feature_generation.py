@@ -14,23 +14,25 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 from Bio import AlignIO
 import re
-
+import numpy as np
 fastas_aligned_before=False
 
-include_charge_features=False
+include_charge_features=True
 #fill in filenames here!
 foldernameoutput="Output/Terpene"
-name_450terpenes="Fasta/non_terpene_p450.faa" #insert either name of fasta or alignment in fasta format (alignment must include "Reference_P450")
-name_450nonterpenes="Fasta/terpene_p450.faa" #insert either name of fasta or alignment in fasta format(alignment must include "Reference_P450")
+name_450terpenes="Fasta/terpene_p450test.faa" #insert either name of fasta or alignment in fasta format (alignment must include "Reference_P450")
+name_450nonterpenes="Fasta/non_terpene_p450test.faa" #insert either name of fasta or alignment in fasta format(alignment must include "Reference_P450")
 filename_permutations=foldernameoutput+"/permutations.txt"
-alignmentfa=(SeqRecord(Seq("MSAVALPRVSGGHDEHGHLEEFRTDPIGLMQRVRDECGDVGTFQLAGKQVVLLSGSHANEFFFRAGDDDLDQAKAYPFMTPIFGEGVVFDASPERRKEMLHNAALRGEQMKGHAATIEDQVRRMIADWGEAGEIDLLDFFAELTIYTSSACLIGKKFRDQLDGRFAKLYHELERGTDPLAYVDPYLPIESLRRRDEARNGLVALVADIMNGRIANPPTDKSDRDMLDVLIAVKAETGTPRFSADEITGMFISMMFAGHHTSSGTASWTLIELMRHRDAYAAVIDELDELYGDGRSVSFHLRQIPQLENVLKETLRLHPPLIILMRVAKGEFEVQGHRIHEGDLVAASPAISNRIPEDFPDPHDFVPARYEQPRQEDLLNRWTWIPFGAGRHRCVGAAFAIMQIKAIFSVLLREYEFEMAQPPESYRNDHSKMVVQLAQPACVRYRRRTGV"),id="Reference_P450"))
+alignmentfa=("MSAVALPRVSGGHDEHGHLEEFRTDPIGLMQRVRDECGDVGTFQLAGKQVVLLSGSHANEFFFRAGDDDLDQAKAYPFMTPIFGEGVVFDASPERRKEMLHNAALRGEQMKGHAATIEDQVRRMIADWGEAGEIDLLDFFAELTIYTSSACLIGKKFRDQLDGRFAKLYHELERGTDPLAYVDPYLPIESLRRRDEARNGLVALVADIMNGRIANPPTDKSDRDMLDVLIAVKAETGTPRFSADEITGMFISMMFAGHHTSSGTASWTLIELMRHRDAYAAVIDELDELYGDGRSVSFHLRQIPQLENVLKETLRLHPPLIILMRVAKGEFEVQGHRIHEGDLVAASPAISNRIPEDFPDPHDFVPARYEQPRQEDLLNRWTWIPFGAGRHRCVGAAFAIMQIKAIFSVLLREYEFEMAQPPESYRNDHSKMVVQLAQPACVRYRRRTGV")
+   
+#alignmentfa=(SeqRecord(Seq("MSAVALPRVSGGHDEHGHLEEFRTDPIGLMQRVRDECGDVGTFQLAGKQVVLLSGSHANEFFFRAGDDDLDQAKAYPFMTPIFGEGVVFDASPERRKEMLHNAALRGEQMKGHAATIEDQVRRMIADWGEAGEIDLLDFFAELTIYTSSACLIGKKFRDQLDGRFAKLYHELERGTDPLAYVDPYLPIESLRRRDEARNGLVALVADIMNGRIANPPTDKSDRDMLDVLIAVKAETGTPRFSADEITGMFISMMFAGHHTSSGTASWTLIELMRHRDAYAAVIDELDELYGDGRSVSFHLRQIPQLENVLKETLRLHPPLIILMRVAKGEFEVQGHRIHEGDLVAASPAISNRIPEDFPDPHDFVPARYEQPRQEDLLNRWTWIPFGAGRHRCVGAAFAIMQIKAIFSVLLREYEFEMAQPPESYRNDHSKMVVQLAQPACVRYRRRTGV"),id="Reference_P450"))
 path_complete_feature_matrix=foldernameoutput+"/path_complete_feature_matrix.csv"
 #S#14703] cytochrome P450 51 Cyp51 ([P#10800] [CYP51] cytochrome P450, family 51 )  from https://cyped.biocatnet.de/sequence/14703
 
 start=0
 end=400
 splitting_list=[["begin",start,92],["sbr1",93,192],["sbr2",193,275],["core",276,395],["end",396,end],["fes1",54,115],["fes2",302,401]]
-fragments=splitting_list[:][0]
+fragments=["begin","sbr1","sbr2","core","end","fes1","fes2"]
 with open(filename_permutations, 'r') as file:
     permutations = [line.rstrip('\n') for line in file]
 def find_between( string, first, last ):
@@ -92,17 +94,21 @@ def convert_splitting_list(splitting_list,index_reference):
 def split_alignment(alignment,fragment):
     start=fragment[1]
     end=fragment[2]
-    seqRecord_list_per_fragment=[]
+    if fastas_aligned_before==False:
+        alignment=[alignment]
+    seqRecord_list_per_fragment=np.array([["",""]])
     if fragment[0]=="begin":
         start=1
     if fragment[0]!="end":
         for record in alignment:
             subsequence=str(record.seq)[start-1:end]
-            seqRecord_list_per_fragment.append([record.id,subsequence])
+     
+            seqRecord_list_per_fragment=np.append(seqRecord_list_per_fragment,[[record.id,subsequence]],axis=0)
     else:
         for record in alignment:
             subsequence=str(record.seq)[start-1:]
-            seqRecord_list_per_fragment.append([record.id,subsequence])
+            seqRecord_list_per_fragment=np.append(seqRecord_list_per_fragment,[[record.id,subsequence]],axis=0)
+    seqRecord_list_per_fragment=np.delete(seqRecord_list_per_fragment, 0, axis=0)
     return seqRecord_list_per_fragment
 def merge_two_dicts(x, y):
     z = x.copy()   # start with x's keys and values
@@ -111,17 +117,19 @@ def merge_two_dicts(x, y):
 def fragment_alignment(alignment,splitting_list):
 
     fragment_matrix=pd.DataFrame()
-    if type(alignment)==class 'Bio.pairwise2.Alignment':
-        print (x)
-        seqa=find_between(str(alignments[0]),"seqA='","'")
-        seqb=find_between(str(alignments[0]),"seqB='","'")
-        index_reference=indexing_reference(seqa)
+    if fastas_aligned_before==False:
+     
+        seqa=alignment[0]
+        seqb=alignment[1]
+        index_reference=indexing_reference(SeqRecord(Seq(seqa),id=seqa))
+
         converted_splitting_list=convert_splitting_list(splitting_list,index_reference)
         for fragment in converted_splitting_list:
                 name_fragment=fragment[0]
-                seqRecord_list_per_fragment=split_alignment(SeqRecord(Seq(seqb),id=find_between(str(alignments[0]),'seqB="ID:','\\'),fragment)
-                fragment_matrix[name_fragment]=seqRecord_list_per_fragment[1]
-                fragment_matrix.set_index(pd.Index(seqRecord_list_per_fragment[0]))
+                seqRecord_list_per_fragment=split_alignment(SeqRecord(Seq(seqb),id=seqb),fragment)
+
+                fragment_matrix[name_fragment]=seqRecord_list_per_fragment[:,1]
+                fragment_matrix.set_index(pd.Index(seqRecord_list_per_fragment[:,0]))
     else:
         for record in alignment:     
             print (record)
@@ -146,7 +154,7 @@ def featurize(fragment_matrix, permutations, fragments, include_charge_features)
             for motif in permutations:
                 name_column=motif+fragment
                 new_row =merge_two_dicts(new_row,{name_column:easysequence_fragment.count(motif)})
-        if include_charge_features==True:
+            if include_charge_features==True:
                 acidic=fragment+"acidic"
                 new_row =merge_two_dicts(new_row,{acidic:(easysequence_fragment.count("a")/len(easysequence_fragment)+1)})
                 acidic_absolute=fragment+"acidic absolute"
@@ -157,8 +165,9 @@ def featurize(fragment_matrix, permutations, fragments, include_charge_features)
                 basic_absolute=fragment+"basic absolute"
                 new_row =merge_two_dicts(new_row,{basic:(easysequence_fragment.count("b")/len(easysequence_fragment)+1)})
                 new_row =merge_two_dicts(new_row,{basic_absolute:(easysequence_fragment.count("b"))})
-        feature_matrix.append(new_row, ignore_index=True)
-    feature_matrix.set_index(fragment_matrix.index)
+              
+        feature_matrix=feature_matrix.append(new_row, ignore_index=True)
+
     if include_charge_features==True:
         chargerows=[]
         acidicrows=[]
@@ -188,20 +197,22 @@ for dataset in (name_450terpenes,name_450nonterpenes):
         for seq_record in SeqIO.parse(dataset, "fasta"):
              fewgaps = lambda x, y: -20 - y
              specificgaps = lambda x, y: (-2 - y)
-             alignment = pairwise2.align.globalmc(alignmentfa,  seq_record, 1, -1, fewgaps, specificgaps,one_alignment_only=True)
-             print (alignment[0], type(alignment[0]))
-             fragment_matrix_for_record=fragment_alignment (alignment,splitting_list)
-             fragment_matrix.append(fragment_matrix_for_record, ignore_index = True)
-             seq_record_ids.append(seq_record.id)
-        feature_matrix.set_index(pd.Index(seq_record_ids))     
+             alignment = pairwise2.align.globalmc(alignmentfa, seq_record.seq, 1, -1, fewgaps, specificgaps)
+             fragment_matrix_for_record=fragment_alignment (alignment[0],splitting_list)
+           
+             fragment_matrix=fragment_matrix.append(fragment_matrix_for_record, ignore_index = True)
+             seq_record_ids=seq_record_ids+[seq_record.id]
+          
     feature_matrix=featurize(fragment_matrix, permutations, fragments, include_charge_features)
 
+    print (feature_matrix)
     if dataset==name_450terpenes:
         feature_matrix["target"]=1
+        print ("x")
     if dataset==name_450nonterpenes: 
          feature_matrix["target"]=0
-    complete_feature_matrix.append(fragment_matrix_for_record, ignore_index = True)
-    
+    complete_feature_matrix=complete_feature_matrix.append(feature_matrix, ignore_index = True)
+    print (complete_feature_matrix)
 #modify table (drop accessionnumber, sequences)
 
 complete_feature_matrix.to_csv(path_complete_feature_matrix, index=False)    
