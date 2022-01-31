@@ -24,7 +24,6 @@ proteases=[]
 for progenome_file in glob.glob(os.path.join(path, '*.fasta')):
         #for each genome
         for progenome_record in SeqIO.parse(progenome_file, "fasta"):
-            print (progenome_record)
             if "protease" in progenome_record.description or"Protease" in progenome_record.description :
                 proteases.append(progenome_record)
 #safe files
