@@ -1,0 +1,82 @@
+fes1basic2,0.005000000000000037
+fes1basic absolute,0.003823529411764737
+endacidic0,0.0020588235294117575
+beginacidic,0.001764705882352935
+beginacidic absolute,0.001764705882352935
+fes2acidic2,0.0008823529411764675
+fes1charge,0.0008823529411764675
+sbr1basic0,0.0008823529411764675
+corecharge,0.0
+corebasic,0.0
+corebasic absolute,0.0
+corebasic1,0.0
+coreacidic2,0.0
+endacidic,0.0
+endbasic0,0.0
+endacidic1,0.0
+fes1acidic,0.0
+endbasic2,0.0
+sbr2basic2,0.0
+fes1basic,0.0
+fes1basic0,0.0
+fes1acidic1,0.0
+fes2basic,0.0
+fes2basic absolute,0.0
+fes2acidic1,0.0
+complete charge,0.0
+endbasic1,0.0
+sbr2acidic1,0.0
+absolute basic,0.0
+sbr1acidic,0.0
+beginacidic1,0.0
+sbr1acidic0,0.0
+sbr1acidic2,0.0
+sbr1basic,0.0
+sbr1basic2,0.0
+sbr2acidic,0.0
+beginacidic0,0.0
+beginbasic,0.0
+sbr1basic1,0.0
+sbr2charge,0.0
+beginbasic2,0.0
+beginbasic1,0.0
+sbr2basic absolute,0.0
+beginbasic0,0.0
+sbr2acidic absolute,0.0
+endbasic absolute,-0.0002941176470588225
+fes1basic1,-0.0002941176470588225
+sbr2acidic2,-0.0002941176470588225
+sbr1acidic1,-0.0002941176470588225
+sbr2acidic0,-0.000588235294117645
+fes2basic0,-0.000588235294117645
+begincharge,-0.000588235294117645
+endacidic2,-0.0008823529411764675
+fes2acidic0,-0.0008823529411764675
+fes2charge,-0.0008823529411764675
+fes2basic1,-0.00117647058823529
+absolute acidic,-0.00117647058823529
+corebasic0,-0.00117647058823529
+fes1acidic0,-0.00117647058823529
+mean basic,-0.00117647058823529
+sbr2basic1,-0.00117647058823529
+beginbasic absolute,-0.00117647058823529
+sbr1basic absolute,-0.0014705882352941124
+corebasic2,-0.0014705882352941124
+sbr2basic0,-0.0014705882352941124
+sbr2basic,-0.0014705882352941124
+beginacidic2,-0.0014705882352941124
+sbr1charge,-0.001764705882352935
+sbr1acidic absolute,-0.0020588235294117575
+fes1acidic absolute,-0.0020588235294117575
+coreacidic1,-0.0020588235294117575
+endbasic,-0.00235294117647058
+endacidic absolute,-0.00235294117647058
+coreacidic0,-0.00235294117647058
+fes2basic2,-0.00235294117647058
+mean acidic,-0.00235294117647058
+fes2acidic,-0.0026470588235294025
+fes1acidic2,-0.0026470588235294025
+endcharge,-0.002941176470588225
+coreacidic absolute,-0.002941176470588225
+coreacidic,-0.002941176470588225
+fes2acidic absolute,-0.002941176470588225

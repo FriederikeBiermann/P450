@@ -1,0 +1,116 @@
+LOCUS       CP016438                2001 bp    DNA     linear   BCT 15-JUL-2016
+DEFINITION  Streptomyces lincolnensis strain NRRL 2936 chromosome.
+ACCESSION   CP016438 REGION: 484944..486944
+VERSION     CP016438.1
+DBLINK      BioProject: PRJNA327477
+            BioSample: SAMN05335414
+KEYWORDS    .
+SOURCE      Streptomyces lincolnensis
+  ORGANISM  Streptomyces lincolnensis
+            Bacteria; Actinobacteria; Streptomycetales; Streptomycetaceae;
+            Streptomyces.
+REFERENCE   1  (bases 1 to 2001)
+  AUTHORS   Meng,S.C.
+  TITLE     Enhancement of antibiotic productionsby engineered
+            nitrateutilization in actinobacteria
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 2001)
+  AUTHORS   Meng,S.C.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2016) School of Life Sciences and Biotechnology,
+            Shanghai Jiao Tong University, 800 Dongchuan Road, Shanghai 200240,
+            China
+COMMENT     ##Genome-Assembly-Data-START##
+            Assembly Method       :: phred/phrap/consed v. unspecified
+            Genome Coverage       :: 26x
+            Sequencing Technology :: GS FLX/454
+            ##Genome-Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2001
+                     /organism="Streptomyces lincolnensis"
+                     /mol_type="genomic DNA"
+                     /strain="NRRL 2936"
+                     /culture_collection="NRRL:2936"
+                     /type_material="type strain of Streptomyces lincolnensis"
+                     /db_xref="taxon:1915"
+                     /country="USA"
+                     /collection_date="2011-12-30"
+     gene            complement(1..1188)
+                     /locus_tag="SLINC_0398"
+     CDS             complement(1..1188)
+                     /locus_tag="SLINC_0398"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="ferredoxin reductase"
+                     /protein_id="ANS62622.1"
+                     /translation="MRRIVVVGASAAGLAAAETLRREGYDGTLTLVGDEPLAPYDRPP
+                     LSKQVLAAEWEPERLALRTADALAALNLDLRLGVAATGLELTGRTVELADGSALPYDG
+                     LIVATGVRPRRLPGEGAHVLRGIGDALALRERLTPGRRLVVVGAGFLGAEAAAVAWRL
+                     GCEVTLLEPAPVPLAHAVGAEVGEILTRAHRERGVNLRCGVAVTEVTEDGVRLADGEL
+                     VDADEVLVAVGSLPNTEWLAGSGLTVGDGVVCDEYCAAAQGVYAAGDVARWHNPLFGT
+                     SMRIEHRTNAAEQGMAAARNLLAPDAGRPFAPVPYFWSDQYDMKVQAYGYLRGHDEVA
+                     VVEGGMADRRFVAAYRTGDRLTGVLAVGMPPKAIRRWRQAIAGRAAWQDAVRTEVPVT
+                     EVS"
+     gene            complement(1185..1379)
+                     /locus_tag="SLINC_0399"
+     CDS             complement(1185..1379)
+                     /locus_tag="SLINC_0399"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative ferredoxin"
+                     /protein_id="ANS62623.1"
+                     /translation="MKVELEADKCVASGQCVLAAMDVFDQDDDGIAILLADEPAVELL
+                     DDVKEAVAVCPAAAIRLVEQ"
+     gene            complement(1432..>2001)
+                     /locus_tag="SLINC_0400"
+     CDS             complement(1432..>2001)
+                     /locus_tag="SLINC_0400"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="cytochrome P450"
+                     /protein_id="ANS62624.1"
+                     /translation="MADTLAGPVPESPDSLPEFPMPRQARCPFDPPPALKDLQEKAPL
+                     TKVRLWDGSEPWLVTKYADQRALLGDPRVSADTDSPGYPTKASPEGGEGKLSFIMMDD
+                     PEHARLRRMVTAPFAIKRVEALRPAVQKIVDDLIDGMLGRPGPVDLVEEFALPIPSLV
+                     ICELLGVPYDDHAFFQDNTKTMVHRDATPEQRGQASREVAGYLATLIGKRLAEPRDDL
+                     LSGIAGRVTAGEIDHRQATEMALLLLIAGHETTANMIALGTLALLQNPDQLALLRESD
+                     DPKFVAGAVEELLRYLHITHLGRRRAVTEDIEIGGRLVRAGEGVIMANEIANRDPEVF
+                     PDPDRLDLTRDARRHVAFGFGVHQCLGQPLARMELQVVYGTLYKRIPTLKLACALEDV
+                     RFKNDAFIYGVHELPVSW"
+ORIGIN      
+        1 tcacgaaacc tcggtcaccg gaacctccgt gcgcacggcg tcctgccagg ccgcgcgccc
+       61 cgcgatggcc tggcgccacc ggcggatcgc cttgggcggc atgccgacgg cgaggacgcc
+      121 ggtgaggcgg tcgccggtgc ggtacgcggc gacgaaccgg cggtccgcca tgcccccttc
+      181 caccacggcg acttcgtcat ggcctcggag gtagccgtat gcctggacct tcatgtcgta
+      241 ctggtcggac cagaagtacg gcaccggcgc gaagggtctg cccgcgtcgg gggcgaggag
+      301 gttgcgggcg gcggccatgc cctgttcggc ggcgttggtg cggtgctcga tccgcatcga
+      361 ggtgccgaac agcgggttgt gccagcgggc gacgtcaccg gcggcataga cgccctgggc
+      421 ggccgcgcag tactcgtcgc acaccacccc gtcccccacg gtgaggccgc tgcccgccag
+      481 ccactcggtg ttgggcaggg agccgacggc gaccaacacc tcgtcggcat cgacgagttc
+      541 accgtccgcg agccgtaccc cgtcctcggt cacctcggtc acggcgaccc cgcagcgcag
+      601 gttcacaccc cgctcccggt gggcgcgcgt caggatctcg ccgacctcgg cgccgacggc
+      661 gtgggccagc ggcaccgggg cgggttcgag gagcgtgacc tcgcagccga gccgccaggc
+      721 gacggcggcg gcctccgcgc cgaggaaccc ggcgcccacc acgaccagcc gccgccccgg
+      781 agtgagccgc tcccgcaggg cgagcgcgtc cccgatgccg cgcaggacgt gcgcgccctc
+      841 gccgggcagc cgacgcggcc ggactccggt ggccacgatc agcccgtcgt acggcagggc
+      901 ggacccgtcg gccaactcca ccgtgcggcc ggtgagttcg aggccggtgg ccgcgacgcc
+      961 gagccgcagg tcgaggttga gtgcggccag ggcgtcggcg gtgcgcaggg ccagccgctc
+     1021 gggctcccac tccgcggcca ggacctgctt cgacaggggc ggacggtcgt agggcgccag
+     1081 cggctcgtcg ccgacgaggg tgagcgtgcc gtcgtagccc tcccggcgga gggtctcggc
+     1141 cgccgcgagt ccggcggccg aggcaccgac gacgacgatc cgcctcactg ctcgaccagc
+     1201 cggatggcgg cggccgggca gaccgcgacg gcctccttga cgtcgtcgag gagttcgacg
+     1261 gcgggttcgt ccgccagcag gatcgcgatg ccgtcgtcgt cctggtcgaa gacgtccatc
+     1321 gcggcgagca cgcactgccc ggaggcgacg cacttgtcgg cttccagctc caccttcatg
+     1381 gggattccct tcttcacacg tgttctgggt cgttcgcgcg gcggcaggcc gtcaccagga
+     1441 gacgggcagt tcgtgcacgc cgtagatgaa cgcgtcgttc ttgaagcgga cgtcctccag
+     1501 ggcgcaggcg agcttgaggg tggggatgcg cttgtagagg gtgccgtaga cgacctggag
+     1561 ttccatgcgg gccaggggct gaccgaggca ctggtggacg ccgaagccga aggcgacgtg
+     1621 gcggcgggcg tcgcgggtga ggtcgagccg gtcggggtcg gggaacacct cggggtcgcg
+     1681 gttggcgatc tcgttggcca tgatgacgcc ctcgccggcc ctgacgagcc ggccaccgat
+     1741 ctcgatgtcc tcggtgaccg cgcgacgccg tcccaggtgg gtgatgtgca ggtagcgcag
+     1801 cagttcctcg accgcgcccg cgacgaactt cgggtcgtcg ctctcgcgca gcagggcgag
+     1861 ctggtcgggg ttctggagga gggcgagggt gccgagggcg atcatgttcg cggtggtctc
+     1921 gtggcccgcg atcagcagga gcagcgccat ctccgtggcc tgccggtggt cgatctcgcc
+     1981 ggccgtgacg cgcccggcga t
+//
+
