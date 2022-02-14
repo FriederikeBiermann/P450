@@ -1,0 +1,141 @@
+>431269.SAMN03203477.QQ44_18160	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="431269.SAMN03203477" cog="-" sample_id="SAMN03203477" project_id="PRJNA268177" protein_id="KHO24063.1" /> <unknown description>
+MRVKVDEDRCAGHGMCLTLCPEVFEMSDDGWAVADPEDVPAGLEGAAREAIENCPERAIS
+EIGN
+>1010838.SAMN02470597.MAPs_33430	<annotation product="ferredoxin" note="PFAM: Protein of unknown function (DUF1271)" tax_id_sample_id="1010838.SAMN02470597" cog="-" sample_id="SAMN02470597" project_id="PRJNA66075" protein_id="EGO40017.1" /> <unknown description>
+MRVWVDDQRCRGHGMCLTLCPEVFSLTDDGYAEAIDADVPTELESAAQEAIECCPEQAIS
+EK
+>1229671.SAMD00061038.MAH_0754	<annotation product="ferredoxin" tax_id_sample_id="1229671.SAMD00061038" cog="-" sample_id="SAMD00061038" project_id="PRJDB502" protein_id="BAN29828.1" /> <unknown description>
+MRVWVDDQRCRGHGMCLTLCPEVFSLTDDGYAEAIDADVPTELESAAQEAIECCPEQAIS
+EK
+>1435356.SAMN02641478.Y013_12010	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1435356.SAMN02641478" cog="-" sample_id="SAMN02641478" project_id="PRJNA231235" protein_id="AHD21341.1" /> <unknown description>
+MKVVVDDDACRGHGVCLAACPEVFDLSDGGYAVTLMSEVPAEHQDSVREAAGGCPERAIR
+LD
+>1441730.SAMN02486559.Z045_00975	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1441730.SAMN02486559" cog="-" sample_id="SAMN02486559" project_id="PRJNA232743" protein_id="KSZ60088.1" /> <unknown description>
+MKVFVDDDACRGHGVCLTACPEVFDLSDGGYAVTLVSEVPAEHEESVREAAAGCPERAIR
+LD
+>713612.SAMN03217555.QR64_09920	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="713612.SAMN03217555" cog="-" sample_id="SAMN03217555" project_id="PRJNA268262" protein_id="KHJ73052.1" /> <unknown description>
+MKVVVDDDACRGHGVCLAACPEVFDLSDGGYAVTLMSEVPAEHQDSVREAAGGCPERAIR
+LD
+>903528.SAMN02745947.SAMN02745947_04438	<annotation product="ferredoxin" tax_id_sample_id="903528.SAMN02745947" cog="-" sample_id="SAMN02745947" project_id="PRJEB20270" protein_id="SMG54733.1" /> <unknown description>
+MKVFVDDDACRGHGVCLAACPEVFDLSDGGYAVTLVSEVPAEHEESVREAAAGCPERAIR
+LD
+>1041522.SAMN00622208.MCOL_V226032	<annotation product="ferredoxin" note="COG1141 Ferredoxin" tax_id_sample_id="1041522.SAMN00622208" cog="COG1141" sample_id="SAMN00622208" project_id="PRJNA67689" protein_id="EJO86468.1" /> <unknown description>
+MKVWVDDQKCRGHGMCLTLCPDVFSLTDDGYAEAIDSDVPTELQDAAQEAIQCCPEQAIS
+EK
+>1299333.SAMN02641613.I552_2037	<annotation product="ferredoxin" tax_id_sample_id="1299333.SAMN02641613" cog="-" sample_id="SAMN02641613" project_id="PRJNA191797" protein_id="EUA51096.1" /> <unknown description>
+MRVAVDDQRCRGHGVCTTLCPEVFQLNDDGYSEVQVPEVPAGLESAARQAIADCPEQAIS
+ES
+>1131442.SAMEA3139029.MMARE11_45640	<annotation product="ferredoxin" note="ferredoxins are iron-sulfur proteins that transfer electrons in a wide variety of metabolic reactions" tax_id_sample_id="1131442.SAMEA3139029" cog="-" sample_id="SAMEA3139029" project_id="PRJEB5070" protein_id="CDM78701.1" /> <unknown description>
+MKVRVDDQRCRGHGMCLTLCPEVFSLTDDGYAVAITSDVPMELEEAVREAIQCCPEQAIS
+ES
+>459424.SAMN02603618.MULP_04958	<annotation product="ferredoxin" EC_number="1.-.-.-" tax_id_sample_id="459424.SAMN02603618" cog="-" sample_id="SAMN02603618" project_id="PRJNA20227" protein_id="AGC64440.1" /> <unknown description>
+MKVRVDDQRCRGHGMCLTLCPEVFSLTDDGYAVAITSDVPMELEEAVREAIQCCPEQAIS
+ES
+>1138871.SAMN02603187.OEM_07860	<annotation product="ferredoxin" tax_id_sample_id="1138871.SAMN02603187" cog="-" sample_id="SAMN02603187" project_id="PRJNA82265" protein_id="AGP62322.1" /> <unknown description>
+MKVWVDDQRCRGHGMCLTLCPDVFSLTDDGYAEAIDSDVPTELEADAREAIQCCPEQAIS
+EK
+>1299329.SAMN02641609.I548_3581	<annotation product="ferredoxin" tax_id_sample_id="1299329.SAMN02641609" cog="-" sample_id="SAMN02641609" project_id="PRJNA191793" protein_id="EUA25495.1" /> <unknown description>
+MKVWVDDQRCRGHGMCLTLCPDVFSLTDDGYAEAIDSDVPTELEADAREAIQCCPEQAIS
+EK
+>1226750.SAMN04537322.MPHL43239_20060	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1226750.SAMN04537322" cog="-" sample_id="SAMN04537322" project_id="PRJNA173675" protein_id="KXW61548.1" /> <unknown description>
+MKVTVDEDRCAGHGMCLTLCPEIFELNDDGWAVASPEEVPAELEAAARDAIANCPEKAIR
+EID
+>1194972.SAMN02470132.MVAC_05397	<annotation product="4Fe-4S ferredoxin" note="COG1141 Ferredoxin" tax_id_sample_id="1194972.SAMN02470132" cog="COG1141" sample_id="SAMN02470132" project_id="PRJNA167528" protein_id="EJZ11452.1" /> <unknown description>
+MKVTVDDDLCRGHGVCAAVCPQVFTLTDGGYAEATLADVPADLEPAVAEAVASCPEHAIL
+TR
+>1796.SAMN03699825.AA982_09980	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1796.SAMN03699825" cog="-" sample_id="SAMN03699825" project_id="PRJNA284213" protein_id="KLI08269.1" /> <unknown description>
+MRVRVDEDRCAGHGMCLTLCPEVFEMSDDGWAVASPEEVPPGSEDAAREAIQNCPERAIS
+EIDN
+>1802.PRJEB5746.BN975_02903	<annotation product="4Fe-4S ferredoxin" tax_id_sample_id="1802.PRJEB5746" cog="-" sample_id="PRJEB5746" project_id="PRJEB5746" protein_id="CDP86708.1" /> <unknown description>
+MRVVVDDDLCRGHGVCAALCPQVFTLTDGGYAEALSTDIPSELQSTVAQAVDGCPERAIR
+FTD
+>451644.SAMEA3305051.BN970_05674	<annotation product="4Fe-4S ferredoxin" tax_id_sample_id="451644.SAMEA3305051" cog="-" sample_id="SAMEA3305051" project_id="PRJEB5740" protein_id="CQD23205.1" /> <unknown description>
+MRVVVDDDLCRGHGVCAALCPQVFTLTDGGYAEALSTDIPSELQSTVAQAVDGCPERAIR
+FTD
+>451644.SAMEA3305051.BN970_06287	<annotation product="ferredoxin" tax_id_sample_id="451644.SAMEA3305051" cog="-" sample_id="SAMEA3305051" project_id="PRJEB5740" protein_id="CQD24143.1" /> <unknown description>
+MRVRVDEDRCAGHGMCLTLCPEVFEMSDDGWAVASPEEVPPGSEDAAREAIQNCPERAIS
+EIDN
+>1768.SAMN06339040.B1T43_19145	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1768.SAMN06339040" cog="-" sample_id="SAMN06339040" project_id="PRJNA374853" protein_id="ARG57625.1" /> <unknown description>
+MRVWVDDQCCRGHGMCLTLCPEVFRLTDDGYAEAITSDVPTELEAAAREAIECCPEQAIR
+ER
+>1768.SAMN06339042.B1T45_19630	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1768.SAMN06339042" cog="-" sample_id="SAMN06339042" project_id="PRJNA374853" protein_id="ARG63141.1" /> <unknown description>
+MRVWVDDQCCRGHGMCLTLCPEVFRLTDDGYAEAITSDVPTELEAAAREAIECCPEQAIR
+ER
+>512402.SAMN03734870.ABW16_05925	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="512402.SAMN03734870" cog="-" sample_id="SAMN03734870" project_id="PRJNA285002" protein_id="KLO30449.1" /> <unknown description>
+MKAWVDPDRCAGHGICTTICPEVFAINDDGYSEAAAGDVPEQFEDAVRDAIKQCPEHAID
+DVTDDSSTEES
+>269536.SAMN03463641.ACG83_23120	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="269536.SAMN03463641" cog="-" sample_id="SAMN03463641" project_id="PRJNA281700" protein_id="KPM53548.1" /> <unknown description>
+MKVSIDHDLCQGHARCWDICPEVFELDEQGHGLVAVPEVPPAHEAKAREAAENCPERAIT
+VS
+>795642.SAMN04233181.Ga0074812_10368	<annotation product="ferredoxin" tax_id_sample_id="795642.SAMN04233181" cog="-" sample_id="SAMN04233181" project_id="PRJEB11831" protein_id="CUU54578.1" /> <unknown description>
+MKVFVDEDRCCGHSTCCTLCPEVFSLSDDGFAVVIVDEVPPDFESVVHSAVSNCPEQAIS
+AS
+>795642.SAMN04233181.Ga0074812_13611	<annotation product="ferredoxin" tax_id_sample_id="795642.SAMN04233181" cog="-" sample_id="SAMN04233181" project_id="PRJEB11831" protein_id="CUU60151.1" /> <unknown description>
+MKVSIDHDLCQGHARCWDICPEVFELDEQGHGLVAVPEVPPAHEAKAREAAENCPERAIT
+VS
+>354243.SAMN03793173.ACT18_14315	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="354243.SAMN03793173" cog="-" sample_id="SAMN03793173" project_id="PRJNA288076" protein_id="OBY31057.1" /> <unknown description>
+MKAWVDPDRCAGHGICTTICPEVFAINDDGYSEVTVDEVPPQFEDTVRDAIKQCPEHAID
+DVTDSQEEN
+>354243.SAMN06064243.BST28_09070	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="354243.SAMN06064243" cog="-" sample_id="SAMN06064243" project_id="PRJNA354248" protein_id="ORA80546.1" /> <unknown description>
+MKAWVDPDRCAGHGICTTICPEVFAINDDGYSEVTVDEVPPQFEDAVRDAIKQCPEHAID
+DVTDSQEEN
+>81858.SAMN06064238.BST23_07100	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="81858.SAMN06064238" cog="-" sample_id="SAMN06064238" project_id="PRJNA354248" protein_id="ORA67575.1" /> <unknown description>
+MKVTVDEDRCRGHGMCLTLCPEVFQMHDDGYAVADPSEVPEGLEEAAKDAIANCPEQAIS
+EID
+>59750.SAMN04113082.AFM11_10690	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="59750.SAMN04113082" cog="-" sample_id="SAMN04113082" project_id="PRJNA296779" protein_id="KWX24420.1" /> <unknown description>
+MRVRVDEDRCAGHGMCLTLCPEVFEMSEDGWAVADPEGVPAGLEDAAREAVENCPERAIS
+EIND
+>683316.SAMN03353334.UG55_102192	<annotation product="ferredoxin" note="PFAM: 4Fe-4S single cluster domain" tax_id_sample_id="683316.SAMN03353334" cog="-" sample_id="SAMN03353334" project_id="PRJNA275797" protein_id="OAA25656.1" /> <unknown description>
+MKVSIDHDLCQGHARCWDICPEVFELDEQGHGLVAVPEVPPAHEAKAREAAENCPERAIS
+IS
+>931627.SAMN02256528.MycrhDRAFT_5861	<annotation product="ferredoxin" note="KEGG: mmi:MMAR_4736 ferredoxin" tax_id_sample_id="931627.SAMN02256528" cog="-" sample_id="SAMN02256528" project_id="PRJNA60639" protein_id="EHB47735.1" /> <unknown description>
+MKASIDDGRCRGHGVCTTICPEVFAMTDDGYAEAILDEVPDELQDRAREAAEACPENAVV
+LD
+>1855348.SAMN05216489.SAMN05216489_09253	<annotation product="ferredoxin" tax_id_sample_id="1855348.SAMN05216489" cog="-" sample_id="SAMN05216489" project_id="PRJEB16443" protein_id="SEE96904.1" /> <unknown description>
+MKAVIDTDRCRGHGICWSICPEVFDLTDDGYAEVLTPEVPAEYEAQVREAAASCPERAIT
+VN
+>68239.SAMN02787118.SAMN02787118_105170	<annotation product="ferredoxin" tax_id_sample_id="68239.SAMN02787118" cog="-" sample_id="SAMN02787118" project_id="PRJEB17260" protein_id="SFF29212.1" /> <unknown description>
+MKAKVDEDRCRGHGVCWSLCPEVFDLTDDGYAVVLTPEVPAGFEDTVRTAMGSCPERAIT
+LD
+>1415546.SAMN02900622.ADK57_34840	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1415546.SAMN02900622" cog="-" sample_id="SAMN02900622" project_id="PRJNA238534" protein_id="KOU58893.1" /> <unknown description>
+MKVSVDDDRCRGHGVCCTLCPEVFELSDAGYTVVETPDVPAEFEEAVRSAAGMCPERAIT
+VS
+>701042.SAMN06064246.BST31_01270	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="701042.SAMN06064246" cog="-" sample_id="SAMN06064246" project_id="PRJNA354248" protein_id="ORA96241.1" /> <unknown description>
+MRVWVDDQRCRGHGMCLTLCPDVFSLTDDGYAEAIDSDVPTELEADAREAIQCCPEQAIS
+EK
+>1761810.SAMN04488580.SAMN04488580_102490	<annotation product="ferredoxin" tax_id_sample_id="1761810.SAMN04488580" cog="-" sample_id="SAMN04488580" project_id="PRJEB16651" protein_id="SEA37121.1" /> <unknown description>
+MKVVVDEDRCRGHGMCLTLCPDVFSMTDDGYAVADPSEIGPGLEDAVRDAMTNCPEQAIV
+ETND
+>1761812.SAMN04488582.SAMN04488582_10960	<annotation product="ferredoxin" tax_id_sample_id="1761812.SAMN04488582" cog="-" sample_id="SAMN04488582" project_id="PRJEB17273" protein_id="SFG55271.1" /> <unknown description>
+MRVRVDEDRCAGHGMCLTLCPEVFEMSDDGWAVADPEEVPAGLEDAAREAIQNCPERAIS
+EIEG
+>1761812.SAMN04488582.SAMN04488582_104599	<annotation product="ferredoxin" tax_id_sample_id="1761812.SAMN04488582" cog="-" sample_id="SAMN04488582" project_id="PRJEB17273" protein_id="SFF90169.1" /> <unknown description>
+MKVHVDDDRCRGHGVCVAVCPDVFTLTDGGYAETLVDDVPPELAAEVPEAVTGCPEHAIT
+LG
+>1772.SAMEA2517361.ERS451418_04676	<annotation product="4Fe-4S ferredoxin" tax_id_sample_id="1772.SAMEA2517361" cog="-" sample_id="SAMEA2517361" project_id="PRJEB6403" protein_id="CKI21703.1" /> <unknown description>
+MKVAVDEDRCAGHGMCLTLCPEVFELSDDGWAVAAAGEVPAEHEAAVREAIDCCPESAIH
+KL
+>1226751.SAMN06064249.BST34_23760	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1226751.SAMN06064249" cog="-" sample_id="SAMN06064249" project_id="PRJNA354248" protein_id="ORB14215.1" /> <unknown description>
+MRVTVDDDLCRGHGVCAAVCPSVFVITDGGYAEATADGIPPDLEASVREAVDGCPEHAIH
+IKEENHVN
+>164756.SAMN02598348.Mmcs_0618	<annotation product="4Fe-4S ferredoxin, iron-sulfur binding protein" note="PFAM: 4Fe-4S ferredoxin, iron-sulfur binding; KEGG: chy:CHY_1120 ferredoxin" tax_id_sample_id="164756.SAMN02598348" cog="-" sample_id="SAMN02598348" project_id="PRJNA15762" protein_id="ABG06739.1" /> <unknown description>
+MRVTVDDDLCRGHGVCAAVCPSVFVITDGGYAEATADGIPPDLEASVREAVDGCPEHAIH
+IKEENHVN
+>1761811.SAMN04488581.SAMN04488581_2735	<annotation product="ferredoxin" tax_id_sample_id="1761811.SAMN04488581" cog="-" sample_id="SAMN04488581" project_id="PRJEB15733" protein_id="SDD64638.1" /> <unknown description>
+MKVEVDEDRCAGHGMCLTLCPEVFDLSDDGWAVAAPGEVPTEHEAAVEEAIACCPENAIR
+KL
+>1440774.SAMN02585141.Y900_025720	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1440774.SAMN02585141" cog="-" sample_id="SAMN02585141" project_id="PRJNA232438" protein_id="KDF02239.1" /> <unknown description>
+MKAHIDDGRCRGHGVCTTVCPDVFAMTDDGYAEAIVDEVPAGLEDRAREAAEACPENAVI
+LDQ
+>1545728.SAMN03758429.AB431_16500	<annotation product="ferredoxin" note="Derived by automated computational analysis using gene prediction method: Protein Homology." tax_id_sample_id="1545728.SAMN03758429" cog="-" sample_id="SAMN03758429" project_id="PRJNA285733" protein_id="AKK28017.1" /> <unknown description>
+MKASIDDGRCRGHGVCTTVCPDVFAMTDDGYAEAIVDEVPAGLEDSAREAADACPENAVI
+LDQ
+>370526.SAMN04489835.SAMN04489835_3271	<annotation product="ferredoxin" tax_id_sample_id="370526.SAMN04489835" cog="-" sample_id="SAMN04489835" project_id="PRJEB15815" protein_id="SEH72084.1" /> <unknown description>
+MKVTVDEDRCAGHGMCLTLCPEVFELNDDGWAVASPEEVPAELESAARDAIANCPERAIR
+EID
+>710685.SAMN02261383.MycrhN_3995	<annotation product="ferredoxin" note="PFAM: Protein of unknown function (DUF1271)" tax_id_sample_id="710685.SAMN02261383" cog="-" sample_id="SAMN02261383" project_id="PRJNA60027" protein_id="AEV74504.1" /> <unknown description>
+MRVTVDEDRCAGHGMCLTLCPEVFEMSDDGWAVAAPGEVPADLESAAKDAIANCPERAIV
+EIDN
+>85558.SAMD00034891.T45_05256	<annotation product="ferredoxin" gene="fdx" tax_id_sample_id="85558.SAMD00034891" cog="-" sample_id="SAMD00034891" project_id="PRJDB4008" protein_id="GAQ73498.1" /> <unknown description>
+MKAAVDEDRCRGHGVCWTLCPEVFDLTDDGYAEVLVPEIPAEHESAVRTAAGSCPERAIV
+LS

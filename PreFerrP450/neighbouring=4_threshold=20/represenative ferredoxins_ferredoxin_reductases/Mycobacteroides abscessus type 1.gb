@@ -1,0 +1,140 @@
+LOCUS       AKUY01000009            2583 bp    DNA     linear   BCT 19-JUN-2012
+DEFINITION  Mycobacteroides abscessus 3A-0122-R 3A_0122_R.contig.8, whole
+            genome shotgun sequence.
+ACCESSION   AKUY01000009 REGION: 128318..130900
+VERSION     AKUY01000009.1
+DBLINK      BioProject: PRJNA65159
+            BioSample: SAMN00715826
+KEYWORDS    WGS.
+SOURCE      Mycobacteroides abscessus 3A-0122-R
+  ORGANISM  Mycobacteroides abscessus 3A-0122-R
+            Bacteria; Actinobacteria; Corynebacteriales; Mycobacteriaceae;
+            Mycobacteroides abscessus.
+REFERENCE   1  (bases 1 to 2583)
+  AUTHORS   Holland,S., Zelazny,A., Sampaio,E., Olivier,K., Conville,P.,
+            Hine,E., Su,Q., Daugherty,S., Shefchek,K., Sengamalay,N.,
+            Watkins,K., Tallon,L., Sadzewicz,L., Fraser-Liggett,C. and
+            Tettelin,H.
+  TITLE     Comparative genomics of clinical isolates of Mycobacterium absessus
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 2583)
+  AUTHORS   Holland,S., Zelazny,A., Sampaio,E., Olivier,K., Conville,P.,
+            Hine,E., Su,Q., Daugherty,S., Shefchek,K., Sengamalay,N.,
+            Watkins,K., Tallon,L., Sadzewicz,L., Fraser-Liggett,C. and
+            Tettelin,H.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (05-MAR-2012) Institute for Genome Sciences, University
+            of Maryland School of Medicine, 801 W. Baltimore St., Baltimore, MD
+            21201, USA
+COMMENT     Bacterial source available from the Biodefense and Emerging
+            Infections Research Resources Repository.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Method       :: Celera Assembler v. 6.1
+            Genome Coverage       :: 50x
+            Sequencing Technology :: Illumina and 454
+            ##Genome-Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2583
+                     /organism="Mycobacteroides abscessus 3A-0122-R"
+                     /mol_type="genomic DNA"
+                     /submitter_seqid="3A_0122_R.contig.8"
+                     /strain="3A-0122-R"
+                     /isolation_source="sputum"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1001715"
+                     /collection_date="22-Jan-2002"
+     gene            complement(1..1272)
+                     /gene="thcD"
+                     /locus_tag="MA3A0122R_1003"
+     CDS             complement(1..1272)
+                     /gene="thcD"
+                     /locus_tag="MA3A0122R_1003"
+                     /EC_number="1.18.1.-"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="rhodocoxin reductase"
+                     /protein_id="EIV38306.1"
+                     /translation="MPALSDSMPVPPDREDAAVVIVGAGHAGVQVAVSLREFGFSDRI
+                     VIVDAEARSPYQRPPLSKEYLCGTVDQPPPLRAHEFYEIQRIEFRRAAAVSIDRAQRT
+                     ITLDDGSRLGYGHLVLATGARNREIPVPGANTPGVLGLRTLDDARDIRERIGTSDDIV
+                     IIGAGFIGLEVAAAARKRGKRVHVVEAVDRVMARVVSPHVSQHLADLHAREGVNVHLG
+                     RSLAAIRTDRAGKLDTVELTCGTTMAADLVVVGVGVVPNIELAAEAGLAVDNGVCVDA
+                     ALLTKDPAISAVGDCAAFPVSGSGASIRLESVQNAVDHGRFVAARLTGSVENYVAVPW
+                     FWTHQYSAKLQIAGKALEVSESVVVGDAQAFSVLRFNDQTLVSVESINRPGDHLAARR
+                     ILAGDKRPSPTDARSPGFSLKSFVQSATSAA"
+     gene            complement(1281..1631)
+                     /gene="fdxB"
+                     /locus_tag="MA3A0122R_1004"
+     CDS             complement(1281..1631)
+                     /gene="fdxB"
+                     /locus_tag="MA3A0122R_1004"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="2Fe-2S ferredoxin"
+                     /protein_id="EIV38307.1"
+                     /translation="MKITFTNSDGYTKSLDAEEGVSLMHVAVSHDVPRITADCGGNAM
+                     CATCHIYVDDADYLRLPPIADDEDEMLDFTECARRPTSRLACQVQVDNALGAITVEIP
+                     LDTESPVAQSVRKG"
+     gene            complement(1634..2560)
+                     /locus_tag="MA3A0122R_1005"
+     CDS             complement(1634..2560)
+                     /locus_tag="MA3A0122R_1005"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative 2-hydroxyhepta-2,4-diene-1,7-dioate
+                     isomerase"
+                     /protein_id="EIV38308.1"
+                     /translation="MNLRIVSFAGADQWQPGVLIDDDTVAPLAPMLARHDIQVSSARE
+                     LIALLPQISPLISDELAGGSFEPVPLDSVALGAPIPEPGQVIALGFNYPTHSDTDSPL
+                     PKMADPVVFMKSPTSISGPRDAVIAPRTSHALDYEIEIAVVIGKPGYRIERSQAIKHV
+                     AGYMLANDITARDVALPFGFGGSPLQAQVVRGKGYPTFCPTGPWLFTTGSDTTFETFD
+                     FELRINGELRQSGSTVDMTLGFAEVVETVSATIALRAGDIILTGTPGGCGFQFDPPRY
+                     LRPGDVIEAHSAKLGKMRLPVHDEKPIESASR"
+ORIGIN      
+        1 ctacgcggca ctggttgcgg actgcacgaa cgacttgagc gagaagcccg gactacgcgc
+       61 atcggtgggg ctcgggcgct tgtcgccggc cagtatgcgg cgggccgcca gatgatcgcc
+      121 gggccggttg atcgactcga cagagaccaa ggtctggtcg ttgaagcgaa gtactgagaa
+      181 ggcttgcgcg tcaccaacca ccacggattc gcttacctca agggcctttc cggcgatctg
+      241 gagttttgcg gagtactggt gcgtccagaa ccacggtacg gcgacgtagt tttcgacgga
+      301 tccggtgagt cgggcagcga cgaaccgacc atggtccacc gcgttctgta ccgattccag
+      361 tcgtatcgag gcgcccgagc cagacacggg gaaggccgcg caatcgccga ccgctgatat
+      421 cgcaggatcc ttggtgagca gcgcggcatc cacacaaact ccgttgtcta cggccagccc
+      481 tgcctcggcc gcgagttcaa tgttgggtac cacaccgacg ccgacgacca ccagatcggc
+      541 ggccatcgtt gtgccacaag tcaattcgac tgtgtctagt tttccggcgc ggtcggtgcg
+      601 gatggcggcc aacgagcgtc ccagatgcac gttgacgcct tcacgtgcat gcaaatccgc
+      661 caggtgctgc gacacgtgcg gcgaaacaac acgtgccatc actctgtcga cggcttcgac
+      721 aacatgcacc cgtttgccgc gcttacgggc cgcggcagca acttcgaggc cgataaagcc
+      781 tgcgccgatg atcacgatat cgtccgaggt gccgatcctc tcgcgaatat cgcgcgcgtc
+      841 atcgagcgtg cgcagcccaa gcacgccagg cgtgttggcg ccggggaccg gaatttcccg
+      901 gttgcgggcg ccggtggcga gtaccagatg cccatagccg aggcggctac catcgtcgag
+      961 cgtgattgtg cgttgagcgc ggtcgatgct gacggcggcg gcacgccgaa attcgatgcg
+     1021 ctgtatttcg tagaattcgt gggcccgcaa gggtgggggc tgatcgacgg tgccgcacag
+     1081 gtactccttg gacagcggcg gacgttgata cggcgatctg gcttctgcgt ccacgatgac
+     1141 gattcgatcg ctaaagccga actcgcgcaa tgagacagcg acttgtacac ccgcgtggcc
+     1201 ggcgccgacg atcaccaccg cggcatcctc acggtctggt ggcaccggca tcgaatcgga
+     1261 gagggctggc attgcggagc ttagcctttc cgcactgatt gtgcgacagg ggattcagta
+     1321 tcgaggggga tttcgacggt aatcgcccct agtgcgttgt cgacttgaac ctgacaggca
+     1381 agacggctcg tcggacggcg cgcgcactcg gtgaagtcga gcatctcgtc ctcgtcatca
+     1441 gcaatcggcg gtagccgtag gtagtcggcg tcgtcgacat atatgtggca ggtggcgcac
+     1501 atcgcgttgc cgccgcagtc ggcggtgata cgtggcacgt catgggaaac cgcgacatgc
+     1561 atgagcgata cgccttcttc tgcgtcaaga gatttcgtgt agccgtcgct attggtgaag
+     1621 gttattttca tcgttacctc gatgcgctct cgatgggttt ttcgtcgtgg acaggtagcc
+     1681 gcattttgcc caacttggcc gaatgagctt cgatcacatc ccccggtcgg aggtagcgcg
+     1741 gaggatcgaa ttggaatccg cagccgccgg gcgttccggt caggatgatg tccccggcgc
+     1801 gcagggcgat ggttgcactc actgtttcaa caacctcggc gaagccgaga gtcatgtcta
+     1861 ccgttgaacc gctctgccgc agttcgccgt tgatccgaag ttcgaagtcg aacgtttcaa
+     1921 acgtcgtatc tgagccggtg gtaaagagcc acgggccagt tgggcagaat gtcgggtatc
+     1981 ccttgccgcg gacaacctgc gcctgcaatg gcgaaccgcc gaagccgaac ggtagcgcaa
+     2041 catcgcgggc agtgatgtcg ttggcgagca tatatccggc gacgtgcttg atcgcctgac
+     2101 tgcgctcgat gcggtatccg ggtttcccaa tgacgacagc aatttcgatt tcgtaatcga
+     2161 gtgcgtgcga tgtccgcggc gcgatgacgg cgtcacgggg gccgctaatg ctggtgggcg
+     2221 acttcatgaa gacgacgggg tccgccatct tcggcagcgg ggaatcggtg tctgaatgtg
+     2281 tcgggtagtt gaagcccaga gcaatgacct ggccgggctc gggaatcggg gcccccaacg
+     2341 caacggagtc gagcggcacc ggttcgaaag agccaccagc gagttcgtca gagatcaacg
+     2401 gcgagatctg cggtaacagt gctatcagct cgcgtgccga ggacacctgg atgtcgtgac
+     2461 gggcgagcat cggcgcaagg ggagcgacgg tgtcatcgtc gatgagcacg ccgggttgcc
+     2521 attgatcggc accggcgaag ctgacgatcc gcaaattcat cagtactttc ccatttcaat
+     2581 tgt
+//
+

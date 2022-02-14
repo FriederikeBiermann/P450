@@ -1,0 +1,153 @@
+LOCUS       BA000030                1461 bp    DNA     linear   BCT 07-OCT-2016
+DEFINITION  Streptomyces avermitilis MA-4680 = NBRC 14893 DNA, complete genome.
+ACCESSION   BA000030 REGION: 1975840..1977300
+VERSION     BA000030.4
+DBLINK      BioProject: PRJNA189
+            BioSample: SAMD00061088
+KEYWORDS    .
+SOURCE      Streptomyces avermitilis MA-4680 = NBRC 14893
+  ORGANISM  Streptomyces avermitilis MA-4680 = NBRC 14893
+            Bacteria; Actinobacteria; Streptomycetales; Streptomycetaceae;
+            Streptomyces.
+REFERENCE   1
+  AUTHORS   Omura,S., Ikeda,H., Ishikawa,J., Hanamoto,A., Takahashi,C.,
+            Shinose,M., Takahashi,Y., Horikawa,H., Nakazawa,H., Osonoe,T.,
+            Kikuchi,H., Shiba,T., Sakaki,Y. and Hattori,M.
+  TITLE     Genome sequence of an industrial microorganism Streptomyces
+            avermitilis: deducing the ability of producing secondary
+            metabolites
+  JOURNAL   Proc. Natl. Acad. Sci. U.S.A. 98 (21), 12215-12220 (2001)
+   PUBMED   11572948
+REFERENCE   2
+  AUTHORS   Ikeda,H., Ishikawa,J., Hanamoto,A., Shinose,M., Kikuchi,H.,
+            Shiba,T., Sakaki,Y., Hattori,M. and Omura,S.
+  TITLE     Complete genome sequence and comparative analysis of the industrial
+            microorganism Streptomyces avermitilis
+  JOURNAL   Nat. Biotechnol. 21 (5), 526-531 (2003)
+   PUBMED   12692562
+REFERENCE   3
+  AUTHORS   Ikeda,H., Kazuo,S.Y. and Omura,S.
+  TITLE     Genome mining of the Streptomyces avermitilis genome and
+            development of genome-minimized hosts for heterologous expression
+            of biosynthetic gene clusters
+  JOURNAL   J. Ind. Microbiol. Biotechnol. 41 (2), 233-250 (2014)
+   PUBMED   23990133
+REFERENCE   4  (bases 1 to 1461)
+  AUTHORS   Omura,S., Ikeda,H., Ishikawa,J., Hanamoto,A., Takahashi,C.,
+            Shinose,M., Takahashi,Y., Horikawa,H., Nakazawa,H., Osonoe,T.,
+            Kushida,N., Shiba,T., Sakaki,Y. and Hattori,M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (29-MAR-2002) Contact:S Omura Kitasato University,
+            Kitasato Institute for Life Sciences; 1-15-1 Kitasato, Sagamihara,
+            Kanagawa 228-8555, Japan URL
+            :http://avermitilis.ls.kitasato-u.ac.jp/
+COMMENT     On Mar 24, 2016 this sequence version replaced BA000030.3.
+            This work was done in collaboration with Haruo Ikeda(*1), Jun
+            Ishikawa(*2), Akiharu Hanamoto(*3), Chigusa Takahashi(*3), Mayumi
+            Shinose(*3), Hiroshi Horikawa(*4), Hidekazu Nakazawa(*4), Tomomi
+            Osonoe(*4), Norihiro Kushida(*4), Hisashi Kikuchi(*4), Tadayoshi
+            Shiba(*5), Yoshiyuki Sakaki(*6,*7), Masahira Hattori(*1,*7)
+            and Satoshi Omura(*1,*3).
+            Final finishing process and all annotation were done by H. Ikeda
+            and J. Ishikawa.
+            *1 Kitasato Institute for Life Sciences, Kitasato University *2
+            National Institute of Infectious Diseases
+            *3 The Kitasato Institute
+            *4 National Institute of Technology and Evaluation *5 School of
+            Science, Kitasato University
+            *6 Institute of Medical Science, University of Tokyo *7 RIKEN,
+            Genomic Sciences Center
+            All the annotated genes identified are available from following
+            urls.
+            http://avermitilis.ls.kitasato-u.ac.jp.
+FEATURES             Location/Qualifiers
+     source          1..1461
+                     /organism="Streptomyces avermitilis MA-4680 = NBRC 14893"
+                     /mol_type="genomic DNA"
+                     /strain="MA-4680"
+                     /type_material="type strain of Streptomyces avermitilis"
+                     /db_xref="taxon:227882"
+                     /note="This strain is also named as strain: ATCC 31267,
+                     NCIMB 12804 or NRRL 8165."
+     gene            complement(1..1218)
+                     /gene="fprC"
+                     /locus_tag="SAVERM_1609"
+                     /old_locus_tag="SAV_1609"
+     CDS             complement(1..1218)
+                     /gene="fprC"
+                     /locus_tag="SAVERM_1609"
+                     /old_locus_tag="SAV_1609"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative NAD(P)H-ferredoxin reductase"
+                     /protein_id="BAC69320.1"
+                     /translation="MKRILVVGASAAGLTAAETLRREGYDGTITLVGDECHAPYDRPP
+                     LSKQLLAAEWEPERLALRTPGDLEALDLDLRLGVAATGLDVTDRTVRLADGSSVPYDG
+                     LIVATGVRPRRLPGEGAHVLRTVDDALALRDRLGPGTRLVVVGAGFLGAEAAAVARRL
+                     GADVTLLEPAPVPLAHAVGAEVGEVLSRAHLEHGVELRTGVTVTEVTDEGVRLADGEV
+                     VEADEILVAIGCLPNTEWLKGSGLTLGDGLVCDAYGEAARSVYGAGDVARWHNPLFGV
+                     SMRIEHRTNAAEHGMAAARNLLRPEARRPFAPVPYFWSDQYDMKIQAYGYFRAHDETV
+                     VVEGDLAERRFVAAYRTGDRLTGALAAGLPPRAIRRWRQAIAAGATWREAVRDNISPA
+                     TAPWGSVLPEKIT"
+     gene            complement(1215..1412)
+                     /gene="fdxB"
+                     /locus_tag="SAVERM_1610"
+                     /old_locus_tag="SAV_1610"
+     CDS             complement(1215..1412)
+                     /gene="fdxB"
+                     /locus_tag="SAVERM_1610"
+                     /old_locus_tag="SAV_1610"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative ferredoxin"
+                     /protein_id="BAC69321.1"
+                     /translation="MRVELDEPKCVASGQCVVAAPEVFDQRDDDGVAILLDEEPAAGL
+                     HDGVREAAAVCPAAAIRLVER"
+     gene            complement(1447..>1461)
+                     /gene="cyp7"
+                     /locus_tag="SAVERM_1611"
+                     /old_locus_tag="SAV_1611"
+     CDS             complement(1447..>1461)
+                     /gene="cyp7"
+                     /locus_tag="SAVERM_1611"
+                     /old_locus_tag="SAV_1611"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative cytochrome P450"
+                     /protein_id="BAC69322.1"
+                     /translation="MADALAGRAPDATPPVAAYPMPRAVSCPLAPPPALQPLRDEQPI
+                     TKVRIWNGSTPWLITRHADQRALLTDPRVSNDDRDPGFPYVNAHRAEIAHATPRLITN
+                     TDAPEHTRLRRTVNAPFLIKRIEAMRPAVQRIVDGLIDDMLDGPNPADLLTALALPVP
+                     SLVIAQLLGVPYADHEFFQRNSNLVLDNSVPAEEARAASGALAAYLDTLLAEKTAAPD
+                     ADVLSEMGGRIKAGEMTHREAVHMGVAMLIAGHETTATMISLGTLALLEHPEQLAVLR
+                     DAEDPKVIAAAVEELLRYLTIVHSGIRRVAKEDIEIGDRVIGAGDGLLFDLHAANWDS
+                     EAFPEADRLDLSRPARHHQAFGYGPHQCLGQSLARLELQVVYGTLYRRFPTLRLAAPI
+                     DRLAFHHTGTTYGVRCLPVTW"
+ORIGIN      
+        1 tcaagtaatt ttctccggca gtacgctgcc ccaaggggcc gttgccgggc tgatgttgtc
+       61 ccgcacggcc tcccgccagg tcgcgccggc cgcgatcgcc tggcgccagc ggcggatcgc
+      121 cctgggcggc aggccggccg cgagggctcc ggtcagccgg tcaccggtgc ggtacgcggc
+      181 gacgaaccgg cgttcggcca ggtccccctc cacgaccacc gtctcgtcgt gggcccggaa
+      241 gtagccgtac gcctgaatct tcatgtcgta ctggtccgac cagaagtacg gcaccggcgc
+      301 gaacggtctg cgcgcctcgg ggcggaggag gttgcgggcg gcggccatgc cgtgctcggc
+      361 cgcgttggtg cggtgctcga tcctcatgga caccccgaac agcgggttgt gccagcgggc
+      421 gacgtccccg gcgccgtaca cgctccgcgc ggcttcgccg tacgcgtcgc agaccagacc
+      481 gtcgcccagc gtcagtccgc tgcccttcag ccactcggtg ttgggcagac agccgatggc
+      541 gaccaggatc tcgtccgcct cgaccacctc gccgtccgcg agccgcaccc cctcgtcggt
+      601 cacctcggtc acggtgactc cggtgcgcag ctccacaccg tgctccagat gggcccgcga
+      661 cagcacctca cccacctccg cgccgaccgc gtgggccagc ggcaccggtg cgggttcgag
+      721 gagggtcacg tccgctccca gacgccgggc cacggcggcg gcctccgccc cgaggaagcc
+      781 ggccccgacc acgaccagcc gcgtgcccgg cccgagccgg tcccgcagcg cgagggcgtc
+      841 gtccaccgtg cgcagcacat gcgcgccctc cccgggcagc cggcgcgggc gcactccggt
+      901 ggccacgatc agaccgtcgt acggcaccga cgagccgtcg gccagacgca ccgtacggtc
+      961 cgtcacgtcc agcccggtcg ccgcgacgcc gagccgcagg tcgaggtcga gtgcctccag
+     1021 gtcgcccggc gtccgcaggg cgagccgctc gggttcccac tccgcggcca gcaactgctt
+     1081 ggacagtggc ggccggtcat agggggcgtg gcattcgtcg ccgacgaggg tgatcgtgcc
+     1141 gtcgtacccc tcgcggcgca gcgtctcggc ggccgtgagg ccggccgccg aggctccgac
+     1201 gaccagaatg cgtttcaccg ttccaccagt cggatcgccg ccgccgggca gaccgccgcg
+     1261 gcctctcgta cgccgtcgtg gagtccggcg gcgggttcct cgtccagcag gatcgcgacg
+     1321 ccgtcgtcgt cccgctggtc gaacacctcg ggggcggcca cgacgcactg ccccgatgcc
+     1381 acgcacttcg gttcgtccag ttccacacgc atggttcttg cctctgttcc ttcgtatggg
+     1441 ggggtgtcac caggtgacgg g
+//
+
