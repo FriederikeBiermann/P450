@@ -155,38 +155,43 @@ def featurize(fragment_matrix, permutations, fragments, include_charge_features)
                 name_column=motif+fragment
                 new_row =merge_two_dicts(new_row,{name_column:easysequence_fragment.count(motif)})
             if include_charge_features==True:
-                acidic=fragment+"acidic"
-                new_row =merge_two_dicts(new_row,{acidic:(easysequence_fragment.count("a")/len(easysequence_fragment)+1)})
-                acidic_absolute=fragment+"acidic absolute"
-                new_row =merge_two_dicts(new_row,{acidic_absolute:(easysequence_fragment.count("a"))})
-                charge_name=fragment+"charge"
-                new_row =merge_two_dicts(new_row,{charge_name:(calculate_charge(sequence_fragment))})
-                basic=fragment+"basic"
-                basic_absolute=fragment+"basic absolute"
-                new_row =merge_two_dicts(new_row,{basic:(easysequence_fragment.count("b")/len(easysequence_fragment)+1)})
-                new_row =merge_two_dicts(new_row,{basic_absolute:(easysequence_fragment.count("b"))})
-              
+                new_row=append_charge_features(new_row,fragment,easysequence_fragment,sequence_fragment)
         feature_matrix=feature_matrix.append(new_row, ignore_index=True)
 
     if include_charge_features==True:
-        chargerows=[]
-        acidicrows=[]
-        basicrows=[]
-        absacidicrows=[]
-        absbasicrows=[]
-        for fragment in fragments:
-            chargerows.append(str(fragment)+"charge")
-            acidicrows.append(str(fragment)+"acidic")
-            basicrows.append(str(fragment)+"basic")
-            absacidicrows.append(str(fragment)+"acidic absolute")
-            absbasicrows.append(str(fragment)+"basic absolute")
-        feature_matrix['complete charge']=feature_matrix[chargerows].sum(axis=1)
-        feature_matrix['mean acidic']=feature_matrix[acidicrows].mean(axis=1)  
-        feature_matrix['mean basic']=feature_matrix[basicrows].mean(axis=1)  
-        feature_matrix['absolute acidic']=feature_matrix[absacidicrows].sum(axis=1)  
-        feature_matrix['absolute basic']=feature_matrix[absbasicrows].sum(axis=1)
+        feature_matrix=sum_charge_features(feature_matrix)
+        
     return feature_matrix
 complete_feature_matrix=pd.DataFrame()
+def append_charge_features(new_row,fragment,easysequence_fragment,sequence_fragment):
+    acidic=fragment+"acidic"
+    new_row =merge_two_dicts(new_row,{acidic:(easysequence_fragment.count("a")/len(easysequence_fragment)+1)})
+    acidic_absolute=fragment+"acidic absolute"
+    new_row =merge_two_dicts(new_row,{acidic_absolute:(easysequence_fragment.count("a"))})
+    charge_name=fragment+"charge"
+    new_row =merge_two_dicts(new_row,{charge_name:(calculate_charge(sequence_fragment))})
+    basic=fragment+"basic"
+    basic_absolute=fragment+"basic absolute"
+    new_row =merge_two_dicts(new_row,{basic:(easysequence_fragment.count("b")/len(easysequence_fragment)+1)})
+    new_row =merge_two_dicts(new_row,{basic_absolute:(easysequence_fragment.count("b"))})
+    return new_row
+def sum_charge_features(feature_matrix):
+    chargerows=[]
+    acidicrows=[]
+    basicrows=[]
+    absacidicrows=[]
+    absbasicrows=[]
+    for fragment in fragments:
+        chargerows.append(str(fragment)+"charge")
+        acidicrows.append(str(fragment)+"acidic")
+        basicrows.append(str(fragment)+"basic")
+        absacidicrows.append(str(fragment)+"acidic absolute")
+        absbasicrows.append(str(fragment)+"basic absolute")
+    feature_matrix['complete charge']=feature_matrix[chargerows].sum(axis=1)
+    feature_matrix['mean acidic']=feature_matrix[acidicrows].mean(axis=1)  
+    feature_matrix['mean basic']=feature_matrix[basicrows].mean(axis=1)  
+    feature_matrix['absolute acidic']=feature_matrix[absacidicrows].sum(axis=1)  
+    feature_matrix['absolute basic']=feature_matrix[absbasicrows].sum(axis=1)
 for dataset in (name_450terpenes,name_450nonterpenes):
     if fastas_aligned_before==True:
         alignment = AlignIO.read(open(dataset), "fasta")
