@@ -141,8 +141,8 @@ def fragment_alignment(alignment,splitting_list):
                 for fragment in converted_splitting_list:
                     name_fragment=fragment[0]
                     seqRecord_list_per_fragment=split_alignment(alignment,fragment)
-                    fragment_matrix[name_fragment]=seqRecord_list_per_fragment[1]
-                    fragment_matrix.set_index(pd.Index(seqRecord_list_per_fragment[0]))
+                    fragment_matrix[name_fragment]=seqRecord_list_per_fragment[:,1]
+                    fragment_matrix.set_index(pd.Index(seqRecord_list_per_fragment[:,0]))
     return fragment_matrix
 def featurize(fragment_matrix, permutations, fragments, include_charge_features):
     feature_matrix=pd.DataFrame()
