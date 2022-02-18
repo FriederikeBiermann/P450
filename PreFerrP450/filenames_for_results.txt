@@ -1,0 +1,16 @@
+Datasets with different SSN thresholds/neighbouring=4_threshold=20/Output_deduplicated_95%/for 10 classes/with_motif_features/with parts/Datasets with different SSN thresholds_feature_matrix_without_duplicates_cluster_1-5__include_parts_.csv
+Datasets with different SSN thresholds/neighbouring=4_threshold=20/Output_deduplicated_95%/for 10 classes/with_motif_features/with parts/
+
+Datasets with different SSN thresholds/neighbouring=4_threshold=20/Output_deduplicated_95%/for 10 classes/with_motif_features/without_parts/
+Datasets with different SSN thresholds/neighbouring=4_threshold=20/Output_deduplicated_95%/for 10 classes/with_motif_features/without_parts/Datasets with different SSN thresholds_feature_matrix_without_duplicates_cluster_1-5_.csv
+
+
+Datasets with different SSN thresholds/neighbouring=4_threshold=20/Output_deduplicated_95%/for 10 classes/without_motif_features/with parts/
+Datasets with different SSN thresholds/neighbouring=4_threshold=20/Output_deduplicated_95%/for 10 classes/without_motif_features/with parts/Datasets with different SSN thresholds_feature_matrix_without_duplicates_cluster_1-5__include_parts__without_sequence_motifs_.csv
+
+Datasets with different SSN thresholds/neighbouring=4_threshold=20/Output_deduplicated_95%/for 10 classes/without_motif_features/without_parts/
+Datasets with different SSN thresholds/neighbouring=4_threshold=20/Output_deduplicated_95%/for 10 classes/without_motif_features/without_parts/Datasets with different SSN thresholds_feature_matrix_without_duplicates_cluster_1-5__without_sequence_motifs_.csv
+
+
+
+
