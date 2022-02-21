@@ -1,33 +1,32 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jan 26 08:26:52 2022
-
+Created on Mon Jan  3 18:24:41 2022
+GUI
 @author: friederike
 """
 
-import Bio
+
 import pandas as pd
-from Bio import SeqIO
 from Bio import pairwise2
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
-from Bio import AlignIO
-import re
 import numpy as np
+from tkinter import *
+import math
+import itertools
+import pickle
+from tkinter import messagebox
 fastas_aligned_before=False
 
 include_charge_features=True
+include_sequence_motifs=True
+include_parts=True
 #fill in filenames here!
-foldernameoutput="Output/Terpene"
-name_450terpenes="Fasta/terpene_p450test.faa" #insert either name of fasta or alignment in fasta format (alignment must include "Reference_P450")
-name_450nonterpenes="Fasta/non_terpene_p450test.faa" #insert either name of fasta or alignment in fasta format(alignment must include "Reference_P450")
-filename_permutations=foldernameoutput+"/permutations.txt"
+foldernameoutput=""
+filename_permutations=foldernameoutput+"permutations.txt"
 alignmentfa=("MSAVALPRVSGGHDEHGHLEEFRTDPIGLMQRVRDECGDVGTFQLAGKQVVLLSGSHANEFFFRAGDDDLDQAKAYPFMTPIFGEGVVFDASPERRKEMLHNAALRGEQMKGHAATIEDQVRRMIADWGEAGEIDLLDFFAELTIYTSSACLIGKKFRDQLDGRFAKLYHELERGTDPLAYVDPYLPIESLRRRDEARNGLVALVADIMNGRIANPPTDKSDRDMLDVLIAVKAETGTPRFSADEITGMFISMMFAGHHTSSGTASWTLIELMRHRDAYAAVIDELDELYGDGRSVSFHLRQIPQLENVLKETLRLHPPLIILMRVAKGEFEVQGHRIHEGDLVAASPAISNRIPEDFPDPHDFVPARYEQPRQEDLLNRWTWIPFGAGRHRCVGAAFAIMQIKAIFSVLLREYEFEMAQPPESYRNDHSKMVVQLAQPACVRYRRRTGV")
-   
-#alignmentfa=(SeqRecord(Seq("MSAVALPRVSGGHDEHGHLEEFRTDPIGLMQRVRDECGDVGTFQLAGKQVVLLSGSHANEFFFRAGDDDLDQAKAYPFMTPIFGEGVVFDASPERRKEMLHNAALRGEQMKGHAATIEDQVRRMIADWGEAGEIDLLDFFAELTIYTSSACLIGKKFRDQLDGRFAKLYHELERGTDPLAYVDPYLPIESLRRRDEARNGLVALVADIMNGRIANPPTDKSDRDMLDVLIAVKAETGTPRFSADEITGMFISMMFAGHHTSSGTASWTLIELMRHRDAYAAVIDELDELYGDGRSVSFHLRQIPQLENVLKETLRLHPPLIILMRVAKGEFEVQGHRIHEGDLVAASPAISNRIPEDFPDPHDFVPARYEQPRQEDLLNRWTWIPFGAGRHRCVGAAFAIMQIKAIFSVLLREYEFEMAQPPESYRNDHSKMVVQLAQPACVRYRRRTGV"),id="Reference_P450"))
-path_complete_feature_matrix=foldernameoutput+"/path_complete_feature_matrix.csv"
-#S#14703] cytochrome P450 51 Cyp51 ([P#10800] [CYP51] cytochrome P450, family 51 )  from https://cyped.biocatnet.de/sequence/14703
+used_classifier=foldernameoutput+'extratreeclassifier.sav'
 
 start=0
 end=400
@@ -151,18 +150,18 @@ def featurize(fragment_matrix, permutations, fragments, include_charge_features)
         for fragment in fragments:
             sequence_fragment=row[fragment]
             easysequence_fragment=easysequence(sequence_fragment)
-            for motif in permutations:
-                name_column=motif+fragment
-                new_row =merge_two_dicts(new_row,{name_column:easysequence_fragment.count(motif)})
+            if include_sequence_motifs==True:
+                for motif in permutations:
+                    name_column=motif+fragment
+                    new_row =merge_two_dicts(new_row,{name_column:easysequence_fragment.count(motif)})
             if include_charge_features==True:
                 new_row=append_charge_features(new_row,fragment,easysequence_fragment,sequence_fragment)
         feature_matrix=feature_matrix.append(new_row, ignore_index=True)
-
     if include_charge_features==True:
         feature_matrix=sum_charge_features(feature_matrix)
-        
+    print (feature_matrix)
     return feature_matrix
-complete_feature_matrix=pd.DataFrame()
+
 def append_charge_features(new_row,fragment,easysequence_fragment,sequence_fragment):
     acidic=fragment+"acidic"
     new_row =merge_two_dicts(new_row,{acidic:(easysequence_fragment.count("a")/len(easysequence_fragment)+1)})
@@ -174,6 +173,27 @@ def append_charge_features(new_row,fragment,easysequence_fragment,sequence_fragm
     basic_absolute=fragment+"basic absolute"
     new_row =merge_two_dicts(new_row,{basic:(easysequence_fragment.count("b")/len(easysequence_fragment)+1)})
     new_row =merge_two_dicts(new_row,{basic_absolute:(easysequence_fragment.count("b"))})
+
+    if include_parts==True:
+                if fragment in fragments:
+                    how_many_parts=3
+                    each_part_length = math.ceil(len(easysequence_fragment)/how_many_parts)
+                    iterator = [iter(easysequence_fragment)] * each_part_length
+                    parts = list(itertools.zip_longest(*iterator, fillvalue='X'))
+                    for i in range (0,len(parts)):
+                            part=fragment+"acidic"+ str(i)
+                            par=parts[i]
+                            new_row =merge_two_dicts(new_row,{part:(par.count("a")/(len(par)+1))})
+                            part=fragment+"basic"+ str(i)
+                            par=parts[i]
+                            new_row =merge_two_dicts(new_row,{part:(par.count("b")/(len(par)+1))})
+                    if len(parts)<3:
+                        for dif in range ((len(parts)+1),4):
+                            part=fragment+"acidic"+ str(dif)
+                            new_row =merge_two_dicts(new_row,{part:0})
+                            part=fragment+"basic"+ str(dif)
+                            new_row =merge_two_dicts(new_row,{part:0})
+    
     return new_row
 def sum_charge_features(feature_matrix):
     chargerows=[]
@@ -192,32 +212,44 @@ def sum_charge_features(feature_matrix):
     feature_matrix['mean basic']=feature_matrix[basicrows].mean(axis=1)  
     feature_matrix['absolute acidic']=feature_matrix[absacidicrows].sum(axis=1)  
     feature_matrix['absolute basic']=feature_matrix[absbasicrows].sum(axis=1)
-for dataset in (name_450terpenes,name_450nonterpenes):
-    if fastas_aligned_before==True:
-        alignment = AlignIO.read(open(dataset), "fasta")
-        fragment_matrix=fragment_alignment (alignment,splitting_list)
+    return feature_matrix
+#getting Data for p450 associated with terpenes
+def check_for_AA_sequence(ref_seq):
+    if "M" in ref_seq or "S" in ref_seq or "m" in ref_seq or "s" in ref_seq:
+        print ("")
+    else:
+        print (f'You might have inserted a DNA sequence!')
+        return messagebox.showinfo('Warning', f'You might have inserted a DNA sequence!')
+def ferredoxin_calculation (seq_record):
+    seq_record =input_box.get("1.0", "end")
+    check_for_AA_sequence(seq_record)
+    seq_record=SeqRecord(Seq(seq_record),id="sequence of interest")
     if fastas_aligned_before==False:
         fragment_matrix=pd.DataFrame()
         seq_record_ids=[]
-        for seq_record in SeqIO.parse(dataset, "fasta"):
-             fewgaps = lambda x, y: -20 - y
-             specificgaps = lambda x, y: (-2 - y)
-             alignment = pairwise2.align.globalmc(alignmentfa, seq_record.seq, 1, -1, fewgaps, specificgaps)
-             fragment_matrix_for_record=fragment_alignment (alignment[0],splitting_list)
-           
-             fragment_matrix=fragment_matrix.append(fragment_matrix_for_record, ignore_index = True)
-             seq_record_ids=seq_record_ids+[seq_record.id]
-          
+        fewgaps = lambda x, y: -20 - y
+        specificgaps = lambda x, y: (-2 - y)
+        alignment = pairwise2.align.globalmc(alignmentfa, seq_record.seq, 1, -1, fewgaps, specificgaps)
+        fragment_matrix_for_record=fragment_alignment (alignment[0],splitting_list)
+        fragment_matrix=fragment_matrix.append(fragment_matrix_for_record, ignore_index = True)
+        print (fragment_matrix)
+        seq_record_ids=seq_record_ids+[seq_record.id]
     feature_matrix=featurize(fragment_matrix, permutations, fragments, include_charge_features)
-
     print (feature_matrix)
-    if dataset==name_450terpenes:
-        feature_matrix["target"]=1
-        print ("x")
-    if dataset==name_450nonterpenes: 
-         feature_matrix["target"]=0
-    complete_feature_matrix=complete_feature_matrix.append(feature_matrix, ignore_index = True)
-    print (complete_feature_matrix)
-#modify table (drop accessionnumber, sequences)
+    classifier = pickle.load(open(used_classifier, 'rb'))
+    predicted_ferredoxin=classifier.predict(feature_matrix)
+    y_score = classifier.predict_proba(feature_matrix)
+    print (y_score)
+    
+    return messagebox.showinfo('Result', f'The matching family of ferredoxins is probably {predicted_ferredoxin}, the scores are {y_score}')
 
-complete_feature_matrix.to_csv(path_complete_feature_matrix, index=False)    
+gui = Tk()
+gui.title('PreFerrP450')
+gui.geometry('500x500')
+
+Label(gui, text='Enter amino acid sequence of CYP P450 & hit "Enter" Key').pack(pady=20)
+input_box = Text(gui,height=2000, width= 450, yscrollcommand=TRUE )
+input_box.bind('<Return>',ferredoxin_calculation)
+input_box.pack()
+
+gui.mainloop()

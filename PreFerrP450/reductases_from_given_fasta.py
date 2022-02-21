@@ -13,7 +13,7 @@ from Bio.Seq import Seq
 from Bio import Entrez
 from Bio.SeqRecord import SeqRecord
 
-filename_input="neighbouring=4_threshold=20/ferredoxins/blast_cluster_6_ferredoxins.fasta"
+filename_input="Datasets with different SSN thresholds/neighbouring=4_threshold=20/ferredoxins/whole_dataset_neighbouring_4_threshold_20_deduplicated_ferredoxin_5.fasta"
 filename_output=filename_input+"info.csv"
 outputferre=filename_input+"ferre.fasta"
 outputreductase=filename_input+"reductase.fasta"
@@ -51,7 +51,7 @@ countsafe=0
 #actually finding in fastas
 for record in SeqIO.parse(filename_input, "fasta"):
     
-    try:
+    #try:
             countsafe=countsafe+1
             if "ref" in record.id:
                 gi=find_between(record.id, "ref|","|")
@@ -64,12 +64,12 @@ for record in SeqIO.parse(filename_input, "fasta"):
                 handle.close()
                 for match in re.finditer("(?<=Id': ')[0-9]+", recordtest):
                             gi=match.group()
-            if "ferredoxin" in record.description:
+            if "ferredoxin" not in record.description:
                 gi=record.id
             else: 
                 gi=find_between(record.description,'protein_id="','" /')
             print(gi)
-            print (record.id)
+      
             ref=str(record.seq)
             # fetch all genomes associated with protein
             handle = Entrez.elink(dbFrom = "protein", db = "nucleotide",id=gi)
@@ -89,8 +89,8 @@ for record in SeqIO.parse(filename_input, "fasta"):
                 # find protein of interrest in genome and search neighbouring genes for "reductase"
                 for match in re.finditer(ref, str(record4)):
                     proteinspan1=match.span()[0]
-                    proteinspan2=int((proteinspan1))-25000
-                    proteinspan3=int((proteinspan1))+27000
+                    proteinspan2=int((proteinspan1))-50000
+                    proteinspan3=int((proteinspan1))+52000
                     intervalrecord=str(record4)[proteinspan2:proteinspan3]                   
                     if "reductase" in intervalrecord or "Reductase" in intervalrecord:
                         for match in re.finditer("(?<={'GBQualifier_name': 'product', 'GBQualifier_value': ')...................", intervalrecord):
@@ -117,7 +117,7 @@ for record in SeqIO.parse(filename_input, "fasta"):
                             tableofproteins.to_csv(filename_output, index=False) 
                             SeqIO.write(listferredoxins, outputferre, 'fasta')
                             SeqIO.write(listreductase, outputreductase, 'fasta')
-    except: print ("3")
+    #except: print ("3")
       
 #final saving of files
 tableofproteins.to_csv(filename_output, index=False) 
