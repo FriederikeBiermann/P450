@@ -232,11 +232,12 @@ def ferredoxin_calculation (seq_record):
         alignment = pairwise2.align.globalmc(alignmentfa, seq_record.seq, 1, -1, fewgaps, specificgaps)
         fragment_matrix_for_record=fragment_alignment (alignment[0],splitting_list)
         fragment_matrix=fragment_matrix.append(fragment_matrix_for_record, ignore_index = True)
-        print (fragment_matrix)
+
         seq_record_ids=seq_record_ids+[seq_record.id]
     feature_matrix=featurize(fragment_matrix, permutations, fragments, include_charge_features)
     print (feature_matrix)
     classifier = pickle.load(open(used_classifier, 'rb'))
+    print (classifier.n_features_)
     predicted_ferredoxin=classifier.predict(feature_matrix)
     y_score = classifier.predict_proba(feature_matrix)
     print (y_score)
