@@ -10,11 +10,15 @@ import pandas as pd
 from Bio import SeqIO
 from Bio import Seq
 from Bio.SeqRecord import SeqRecord
-cytoscape_file=pd.read_csv("proteases_tryptorubin_producers_lysine_proteases_2_threshold_5_fasta_cluster1(serine_peptidases).csv")
-filename_output="proteases_tryptorubin_producers_lysine_proteases_2_threshold_5_fasta_cluster1(serine_peptidases)"
-fasta=[]
+cytoscape_file=pd.read_csv("openframes_tryptorubinlike_peptides_withoutduplicates_protein_fas Full Network colorized default node.csv")
+filename_output_frame="openframes_tryptorubinlike_peptides_withoutduplicates_protein_fas Full Network colorized default node"
+
 for cluster in range(1,150):
+    filename_output=filename_output_frame+str(cluster)+".fasta"
+    fasta=[]
     for index, row in cytoscape_file.iterrows():
-        fasta.append( SeqRecord(Seq.Seq(row["Sequence"]),id=row["Description"]))
+     
+        if row["Sequence Count Cluster Number"]==cluster:
+            fasta.append( SeqRecord(Seq.Seq(row["Sequence"]),id=row["Description"]))
     SeqIO.write(fasta, filename_output, 'fasta')
     
